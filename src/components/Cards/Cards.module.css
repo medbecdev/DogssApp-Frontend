@@ -1,0 +1,29 @@
+.cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.alt-message p {
+  padding-top: 1rem;
+  font-size: normal;
+  font-weight: bold;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
+}
+
+.alt-message {
+  padding-bottom: 5rem;
+}
+
+.alt-message img {
+  border-radius: 2%;
+}
+
+.lower-box {
+  display: flex;
+  justify-content: space-evenly;
+}

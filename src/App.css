@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(1rem, 30vw, 2rem);
+  text-decoration: none;
+  position: absolute;
+}
