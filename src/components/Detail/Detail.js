@@ -8,7 +8,7 @@ const Detail = (props) => {
   const [detail, setDetail] = useState({ id: null }); //
   const [isLoading, setIsLoading] = useState(true);
 
-  const url = `http://localhost:3001/dogs/${props.match.params.id}`;
+  const url = `https://dogsapp-backend-production-74e7.up.railway.app/dogs/${props.match.params.id}`;
   const [wasDeleted, setWasDeleted] = useState({
     deleted: false,
     message: "Deleted",

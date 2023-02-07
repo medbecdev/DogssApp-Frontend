@@ -9,8 +9,8 @@ export const fetchBreedsFromAPI = ({ source, temp, sorting }, query) => {
   return function (dispatch) {
     return fetch(
       query
-        ? `http://localhost:3001/dogs?name=${query}`
-        : `http://localhost:3001/dogs`
+        ? `https://dogsapp-backend-production-74e7.up.railway.app/dogs?name=${query}`
+        : `https://dogsapp-backend-production-74e7.up.railway.app/dogs`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -64,7 +64,9 @@ export const fetchBreedsFromAPI = ({ source, temp, sorting }, query) => {
 
 export const fetchTemperamentsFromAPI = () => {
   return function (dispatch) {
-    return fetch(`http://localhost:3001/temperaments`)
+    return fetch(
+      `https://dogsapp-backend-production-74e7.up.railway.app/temperaments`
+    )
       .then((response) => response.json())
       .then((data) => {
         dispatch({ type: "GET_TEMPERAMENTS", payload: data });

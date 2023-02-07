@@ -161,13 +161,16 @@ const Form = () => {
       temperament: form.temperaments,
     };
 
-    const response = await fetch("http://localhost:3001/dogs", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(postData),
-    });
+    const response = await fetch(
+      "https://dogsapp-backend-production-74e7.up.railway.app/dogs",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(postData),
+      }
+    );
 
     setResponseMessage(await response.json());
 
