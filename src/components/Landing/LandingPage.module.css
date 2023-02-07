@@ -2,13 +2,13 @@
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  background-image: url("/Users/carlosmedero/Documents/HENRY/PI/PI-Dogs-main/client/src/components/utils/picture_bank/frisbee-dog.jpeg");
+  background-image: url("frisbee-dog.jpeg");
 }
 
 .css-text-mask {
   font-size: 10vw;
   font-family: Impact, Charcoal, sans-serif;
-  background-image: url("/Users/carlosmedero/Documents/HENRY/PI/PI-Dogs-main/client/src/components/utils/fur-bank/fur2.jpeg");
+  background-image: url("fur2.jpeg");
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -20,7 +20,7 @@
 
 @media (max-width: 1500px) {
   .landing-container {
-    background-image: url("/Users/carlosmedero/Documents/HENRY/PI/PI-Dogs-main/client/src/components/utils/picture_bank/grass2.jpeg");
+    background-image: url("grass2.jpeg");
   }
 }
 

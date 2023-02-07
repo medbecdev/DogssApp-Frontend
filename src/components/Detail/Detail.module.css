@@ -5,7 +5,7 @@
 }
 .title {
   font-family: Impact, Charcoal, sans-serif;
-  background-image: url("/Users/carlosmedero/Documents/HENRY/PI/PI-Dogs-main/client/src/components/utils/picture_bank/staring-dog-3.png");
+  background-image: url("staring-dog-3.png");
   font-size: 4vw;
   background-clip: text;
   -webkit-background-clip: text;
@@ -62,7 +62,7 @@
   width: 100vw;
   background-size: cover;
   position: relative;
-  background-image: url("/Users/carlosmedero/Documents/HENRY/PI/PI-Dogs-main/client/src/components/utils/picture_bank/sand.jpg");
+  background-image: url("sand.jpg");
   display: flex;
   flex-direction: column;
   align-items: center;
