@@ -161,7 +161,7 @@ const Form = () => {
       temperament: form.temperaments,
     };
 
-    const response = await fetch(process.env.REACT_APP_BACKEND_URL, {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/dogs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -203,10 +203,10 @@ const Form = () => {
     }));
   };
 
-  const handleTempWarning = () => {
-    setIsTempWarning(false);
-    console.log(isTempWarning);
-  }; // More effecient handling???
+  // const handleTempWarning = () => {
+  //   setIsTempWarning(false);
+  //   console.log(isTempWarning);
+  // }; // More effecient handling???
 
   return (
     <div className={classes.bg}>
@@ -223,7 +223,7 @@ const Form = () => {
 
           <form onSubmit={handleSubmit}>
             <div
-              onMouseMove={handleTempWarning}
+              // onMouseMove={handleTempWarning}
               className={classes["form-container"]}
             >
               <div className={classes["blank-left"]}></div>

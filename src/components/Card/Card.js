@@ -1,10 +1,14 @@
 import React from "react";
 import classes from "./Card.module.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Card = (props) => {
   return (
-    <div className={classes["card-container"]}>
+    <motion.li
+      variants={props.variants}
+      className={`${classes["card-container"]} ${props.className}`}
+    >
       <Link
         style={{ textDecoration: "none" }}
         to={`/detail/${props.dog.id}`}
@@ -21,7 +25,7 @@ const Card = (props) => {
         <p>{props.dog.temperament}</p>
         <p>{props.dog.weight} kg</p>
       </Link>
-    </div>
+    </motion.li>
   );
 };
 

@@ -44,9 +44,9 @@ const Home = () => {
   useEffect(() => {
     setIsLoading(true);
     dispatch(fetchBreedsFromAPI({ source, temp, sorting }));
-    dispatch(fetchTemperamentsFromAPI());
+    !temperaments.length && dispatch(fetchTemperamentsFromAPI());
     setIsLoading(false);
-  }, [dispatch, source, temp, sorting]);
+  }, [dispatch, source, temp, sorting, temperaments.length]);
 
   const handleRefresh = () => {
     // setSource("all");

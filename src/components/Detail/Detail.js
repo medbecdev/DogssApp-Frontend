@@ -8,7 +8,7 @@ const Detail = (props) => {
   const [detail, setDetail] = useState({ id: null }); //
   const [isLoading, setIsLoading] = useState(true);
 
-  const url = `${process.env.REACT_APP_BACKEND_URL}/${props.match.params.id}`;
+  const url = `${process.env.REACT_APP_BACKEND_URL}/dogs/${props.match.params.id}`;
   const [wasDeleted, setWasDeleted] = useState({
     deleted: false,
     message: "Deleted",
