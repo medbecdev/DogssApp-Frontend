@@ -8,7 +8,7 @@ const Detail = (props) => {
   const [detail, setDetail] = useState({ id: null }); //
   const [isLoading, setIsLoading] = useState(true);
 
-  const url = `https://dogsapp-backend-production-74e7.up.railway.app/dogs/${props.match.params.id}`;
+  const url = `${process.env.REACT_APP_BACKEND_URL}/${props.match.params.id}`;
   const [wasDeleted, setWasDeleted] = useState({
     deleted: false,
     message: "Deleted",
@@ -25,7 +25,7 @@ const Detail = (props) => {
     return () => {
       setIsLoading(true);
     };
-  }, [props.match.params.id]);
+  }, [props.match.params.id, url]);
 
   const handleDelete = () => {
     fetch(url, {

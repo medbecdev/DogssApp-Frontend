@@ -18,6 +18,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const allBreeds = useSelector((state) => state.breeds);
   let temperaments = useSelector((state) => state.temperaments);
+  console.log(!!temperaments.length);
   const [selectDefault, setSelectDefault] = useState("DEFAULT");
   const { source, temp, sorting } = useSelector((state) => state.filters);
   const [isLoading, setIsLoading] = useState(true);
@@ -182,14 +183,14 @@ const Home = () => {
         <div></div>
       </div>
 
-      {!allBreeds.length && !temperaments.length ? (
-        <img className={classes.loading} alt="loading" src={loadingDog} />
-      ) : (
+      {allBreeds.length && temperaments.length ? (
         <>
           <Cards allBreeds={currentPups} loading={isLoading} />
         </>
+      ) : (
+        <img className={classes.loading} alt="loading" src={loadingDog} />
       )}
-      {allBreeds.length > pupsPerPage ? (
+      {allBreeds.length > pupsPerPage && temperaments.length ? (
         <Pagination
           pupsPerPage={pupsPerPage}
           totalPups={allBreeds.length}

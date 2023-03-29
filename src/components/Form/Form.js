@@ -161,16 +161,13 @@ const Form = () => {
       temperament: form.temperaments,
     };
 
-    const response = await fetch(
-      "https://dogsapp-backend-production-74e7.up.railway.app/dogs",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(postData),
-      }
-    );
+    const response = await fetch(process.env.REACT_APP_BACKEND_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postData),
+    });
 
     setResponseMessage(await response.json());
 
